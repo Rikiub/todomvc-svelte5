@@ -5,7 +5,8 @@
     "todomvc-common": "^1.0.5"
   },
   "scripts": {
-    "dev": "vite dev"
+    "dev": "vite dev",
+    "build": "vite build"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.1",

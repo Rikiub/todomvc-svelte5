@@ -2,7 +2,7 @@
 
 > Template used for creating [TodoMVC](http://todomvc.com) apps
 
-![](view.md)
+![](./view.md)
 
 ## License
 
