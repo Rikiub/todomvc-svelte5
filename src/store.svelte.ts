@@ -12,9 +12,17 @@ export enum Filters {
 
 const STORAGE_NAME = "todos";
 
+function restore_todos(): [] {
+	try {
+		const item = localStorage.getItem(STORAGE_NAME);
+		return item ? JSON.parse(item) : [];
+	} catch {
+		return [];
+	}
+}
 
-let ALL_TODOS: TodoBase[] = $state([]);
-ALL_TODOS = JSON.parse(localStorage.getItem(STORAGE_NAME) || "");
+
+let ALL_TODOS: TodoBase[] = $state(restore_todos());
 
 
 const COMPLETED = $derived.by(() => {
