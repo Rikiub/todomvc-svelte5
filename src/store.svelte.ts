@@ -12,7 +12,7 @@ export enum Filters {
 
 const STORAGE_NAME = "todos";
 
-function restore_todos(): [] {
+function restore_todos(): TodoBase[] {
 	try {
 		const item = localStorage.getItem(STORAGE_NAME);
 		return item ? JSON.parse(item) : [];
